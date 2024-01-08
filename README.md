@@ -53,6 +53,10 @@ Kubectl:
 
 - kubectl api-versions: watch versions
 
+- kubectl apply -f [name/path]: create an specification from a file
+
+- kubectl delete -f [name/path]: delete an specification from a file
+
 Utils:
 
 - echo -n [value] | base64: codify the value in base 64
