@@ -28,6 +28,20 @@
     sudo install minikube /usr/local/bin/
     ```
 
+### build images
+
+eval $(minikube -p minikube docker-env): set docker env var into the current terminal, useful to create image inside minikube
+docker build -t billingapp-back:0.0.4 --no-cache --build-arg JAR_FILE=./*.jar .  :to build backend (in resources/java)
+docker build -t billingapp-front:0.0.4 --no-cache .  :to build frontend (in resources/angular)
+
+### To up
+
+kubectl apply -f ./ (in db_config and billingApp_config)
+http://192.168.49.2:30100/ (front)
+http://192.168.49.2:30780 (back)
+http://192.168.49.2:30780/swagger-ui/swagger-ui/index.html (swagger) (admin admin)
+http://192.168.49.2:30200/browser/ (pgadmin)
+
 ### Personal note
 
 Minikube:
@@ -36,6 +50,8 @@ Minikube:
 - minikube start: start status in minkube
 - minikube stop: stop status in minkube
 - minikube service --url [name of the service]: get the url to this service
+- minikube docker-env: show docker env var
+- eval $(minikube -p minikube docker-env): set docker env var into the current terminal, useful to create image inside minikube
 
 Kubectl:
 
