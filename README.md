@@ -37,10 +37,10 @@ docker build -t billingapp-front:0.0.4 --no-cache .  :to build frontend (in reso
 ### To up
 
 kubectl apply -f ./ (in db_config and billingApp_config)
-http://192.168.49.2:30100/ (front)
-http://192.168.49.2:30780 (back)
-http://192.168.49.2:30780/swagger-ui/swagger-ui/index.html (swagger) (admin admin)
-http://192.168.49.2:30200/browser/ (pgadmin)
+<http://192.168.49.2:30100/> (front)
+<http://192.168.49.2:30780> (back)
+<http://192.168.49.2:30780/swagger-ui/swagger-ui/index.html> (swagger) (admin admin)
+<http://192.168.49.2:30200/browser/> (pgadmin)
 
 ### Personal note
 
