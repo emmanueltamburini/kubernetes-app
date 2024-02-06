@@ -9,7 +9,6 @@ spec:
   - name: billing-app-back
     port: 7080
     nodePort : 30780 
-  #type: LoadBalancer
   type: NodePort
   selector:
    app: billing-app-back
